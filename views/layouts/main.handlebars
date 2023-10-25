@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='en'>
+  
+<head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link rel="stylesheet" href="/css/output.css">
+    <link rel='stylesheet' href='../../public/css/style.css' />
+    <title>Meal Kit Store</title>
+</head>
+{{!-- created application header --}}
+<body class="bg-gray-100 font-sans antialiased">
+    <header class='bg-blue-500 p-2 flex justify-between items-center'>
+        <a href='/' class="hover:text-white">
+            <h1 class="text-white text-3xl font-extrabold">
+                Techsperts Meal Kit Store
+            </h1>
+        </a>
+        {{!-- created login/logout buttons --}}
+        <nav class="text-lg space-x-4">
+            {{#if logged_in}}
+            <a href='#' id="logout" class="text-white hover:underline">Logout</a>
+            {{else}}
+            <a href='/login' class="text-white hover:underline">Login</a>
+            <a href='/login' class="text-white hover:underline">New User</a>
+            {{/if}}
+        </nav>
+    </header>
+    {{!-- added meal-kit image --}}
+    <main class='container mx-auto mt-8'>
+        <img src='/assets/mealkit-background.jpg' alt='Background Image' class="w-full" />
+        <section class="p-4 bg-white rounded-lg shadow-md">
+        {{{body}}}
+        </section>
+    </main>
+    <footer class="bg-blue-500 p-4 mt-8 text-white text-center">
+        &copy; 2023 Techsperts Meal Kit Store
+    </footer>
+    <script src='/js/logout.js'></script>
+</body>
+
+</html>
